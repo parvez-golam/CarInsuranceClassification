@@ -1,0 +1,96 @@
+# Package Overview
+package_name: carinsurance_model
+
+# Data Files
+training_data_file: carInsurance_train.csv
+test_data_file: carInsurance_test.csv
+
+# Variables
+# The traget variable for prediction (CarInsurance)
+target: CarInsurance
+
+pipeline_name: carinsurance_model
+pipeline_save_file: carinsurance_model_output_v
+
+
+features:
+  - Age
+  - Job
+  - Marital
+  - Education
+  - Default
+  - Balance
+  - HHInsurance
+  - CarLoan
+  - Communication
+  - LastContactDay
+  - LastContactMonth
+  - NoOfContacts
+  - DaysPassed
+  - PrevAttempts
+  # these are to calculate temporal variable:
+  - CallStart
+  - CallEnd
+
+unused_fields:
+  - Id
+  - Outcome
+
+# set train/test split
+test_size: 0.2
+
+# to set the random seed
+random_state: 11
+
+# categorical variables with NA in train set
+categorical_vars_with_na_frequent:
+  - Education
+  - Job
+
+categorical_vars_with_na_missing:
+  - Communication
+
+
+temporal_var: CallDuration
+
+ref_vars: 
+  - CallStart
+  - CallEnd
+
+
+# variables to log transform
+numerical_yeo_vars:
+  - Balance
+
+binarize_vars:
+  - NoOfContacts
+  - DaysPassed
+  - PrevAttempts
+
+# variables to map
+map_vars:
+  - LastContactMonth
+
+categorical_vars_encode:
+  - Job
+  - Marital
+  - Education
+  - Communication
+
+# variable mappings
+month_mappings:
+  jan: 1
+  feb: 2
+  mar: 3
+  apr: 4
+  may: 5
+  jun: 6
+  jul: 7
+  aug: 8
+  sep: 9
+  oct: 10
+  nov: 11
+  dec: 12
+  Missing: 0
+  NA: 0
+
