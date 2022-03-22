@@ -26,6 +26,8 @@ Add "02_model-serving-api/car-insurance-api" and "carinsurance_model paths" to y
 
 pip install -r test_requirements
 
-Train the model: python "carinsurance_model/train_pipeline.py"
+Train the model: python "app/carinsurance_model/train_pipeline.py"
+
+Run the api: python "app/main.py"
 
 Run the tests pytest tests
