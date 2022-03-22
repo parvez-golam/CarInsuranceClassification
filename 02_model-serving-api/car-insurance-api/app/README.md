@@ -4,5 +4,4 @@ The "carinsurance_model" folder contains the structured model.
 
 "tests" folder contain few basic unit testing on the model prediction and api.
 
-'main.py' will trigger the api.
-
+'main.py' will trigger the api. 
