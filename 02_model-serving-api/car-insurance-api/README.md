@@ -1,5 +1,5 @@
 # Classification Model Package
-The api servise is build with 'FastAPI' using 'uvicorn'.
+The api service is build with 'FastAPI' using 'uvicorn'.
 Folder 'app' contains the details. This is created to give a structure to the model development.
 
 Tox is used here for execution.
