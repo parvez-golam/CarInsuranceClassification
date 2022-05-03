@@ -10,7 +10,7 @@ Folder "config" and file 'config.yml' contains the model configurations.
 
 "trained_model" folder have the latest trained model .pkl file.
 
-'pipelie.py' contains the pipeline.
+'pipeline.py' contains the pipeline.
 
 'train_pipeline.py' is build to train the pipeline.
 
